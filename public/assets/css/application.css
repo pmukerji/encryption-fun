@@ -1,0 +1,51 @@
+body {
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+#message {
+  width: 100%;
+}
+
+#decrypted_message {
+  height: 50px;
+}
+
+#shift_label {
+  margin-left: 20px;
+}
+
+/* Custom container */
+.container-narrow {
+  margin: 0 auto;
+  max-width: 960px;
+}
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+
+.axis text {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.bar {
+  fill: steelblue;
+  fill-opacity: .9;
+  stroke: none;
+}
+
+.barfix {
+  fill: black;
+}
+
+.x.axis path {
+  display: none;
+}
