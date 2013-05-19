@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Encryption GUIs | Caeser Cipher</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/application.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <div class="container-narrow">
+
+      <div class="masthead">
+        <ul class="nav nav-pills pull-right">
+          <li><a href="/">Home</a></li>
+          <li class="active"><a href="/caeser_cipher.html">Caeser Cipher</a></li>
+        </ul>
+        <h3 class="muted">Ecryption GUIs</h3>
+      </div>
+
+      <hr>
+      
+      <div>
+        <label>Encrypted Message:</label><br/>
+        <input id="message" type="textarea" value="replace this text with the encrypted message. you can get an idea of the distribution of the characters blue, compared to typical english in black.">
+        </input>
+      </div>
+      
+      <hr>
+      
+      <div>
+        <label>Decrypted Message:</label><br/>
+        <div id="decrypted_message"></div>
+      </div>
+      
+      <hr>
+      
+      <a id="left_button" class="btn btn-info btn-small"><i class="icon-white icon-arrow-left"></i> Left</a> 
+      <a id="right_button" class="btn btn-info btn-small">Right <i class="icon-white icon-arrow-right"></i></a>
+      <span id="shift_label"><strong>Encryption Shift: </strong><span id="shift">0</span>
+      <div id="barchart"></div><br/>
+
+    </div> <!-- /container -->
+    
+    <script src="assets/js/jquery-1.9.1.min.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="assets/js/caeser_cipher.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    
+  </body>
+</html>
