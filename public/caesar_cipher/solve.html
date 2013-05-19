@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Encryption GUIs</title>
+    <title>Encryption GUIs | Caeser Cipher</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -37,10 +37,32 @@
       </div>
 
       <hr>
-      <h2>A few GUIs for examining basic encryption methods for messages</h2>
+      
+      <div>
+        <label>Encrypted Message:</label><br/>
+        <input id="message" type="textarea" value="qdokzbd sghr sdws vhsg sgd dmbqxosdc ldrrzfd. xnt bzm fds zm hcdz ne sgd chrsqhatshnm ne sgd bgzqzbsdqr aktd, bnlozqdc sn sxohbzk dmfkhrg hm akzbj.">
+        </input>
+      </div>
+      
+      <hr>
+      
+      <div>
+        <label>Decrypted Message:</label><br/>
+        <div id="decrypted_message"></div>
+      </div>
+      
+      <hr>
+      
+      <a id="left_button" class="btn btn-info btn-small"><i class="icon-white icon-arrow-left"></i> Left</a> 
+      <a id="right_button" class="btn btn-info btn-small">Right <i class="icon-white icon-arrow-right"></i></a>
+      <span id="shift_label"><strong>Encryption Shift: </strong><span id="shift">25</span>
+      <div id="barchart"></div><br/>
+
     </div> <!-- /container -->
     
     <script src="/assets/js/jquery-1.9.1.min.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="/assets/js/caesar_cipher/solve.js"></script>
     <script src="/assets/js/bootstrap.min.js"></script>
     
   </body>

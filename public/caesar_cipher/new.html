@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Encryption GUIs</title>
+    <title>Encryption GUIs | Caeser Cipher</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -37,10 +37,30 @@
       </div>
 
       <hr>
-      <h2>A few GUIs for examining basic encryption methods for messages</h2>
+      
+      <div>
+        <label>Original Message:</label><br/>
+        <input id="message" type="textarea" value="replace this text with the message you want to encrypt. use the shifters to encrypt it.">
+        </input>
+      </div>
+      
+      <hr>
+      
+      <div>
+        <label>Encrypted Message:</label><br/>
+        <div id="encrypted_message"></div>
+      </div>
+      
+      <hr>
+      
+      <a id="left_button" class="btn btn-info btn-small"><i class="icon-white icon-arrow-left"></i> Left</a> 
+      <a id="right_button" class="btn btn-info btn-small">Right <i class="icon-white icon-arrow-right"></i></a>
+      <span id="shift_label"><strong>Encryption Shift: </strong><span id="shift">0</span>
+
     </div> <!-- /container -->
     
     <script src="/assets/js/jquery-1.9.1.min.js"></script>
+    <script src="/assets/js/caesar_cipher/new.js"></script>
     <script src="/assets/js/bootstrap.min.js"></script>
     
   </body>
