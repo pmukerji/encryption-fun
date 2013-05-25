@@ -39,28 +39,21 @@
       <hr>
       
       <div>
-        <label>Encrypted Message:</label><br/>
-        <input id="message" type="textarea" value="replace this text with the encrypted message. you can get an idea of the distribution of the characters blue, compared to typical english in black."></input>
+        <label>Original Message:</label><br/>
+        <input id="message" type="textarea" value="replace this text with the original message and you get an encrypted version"></input>
       </div>
 
       <hr>
-      
-      <div>
-        <label>Shift Key Length:</label><br/>
-        <input id="shift_key_length" type="number" min="1" max="100" value="1"></input>
-      </div>
             
-      <hr>
-      
       <div>
         <label>Shift Key:</label><br/>
-        <input id="shift_key" type="textarea" value=""></input>
+        <input id="shift_key" type="textarea" value="example"></input>
       </div>
       
       <hr>
       
       <div>
-        <label>Decrypted Message:</label><br/>
+        <label>Encrypted Message:</label><br/>
         <div id="decrypted_message"></div>
       </div>
       
@@ -75,7 +68,7 @@
     
     <script src="/assets/js/jquery-1.9.1.min.js"></script>
     <script src="http://d3js.org/d3.v3.min.js"></script>
-    <script src="/assets/js/polyalphabetic_cipher.js"></script>
+    <script src="/assets/js/polyalphabetic_cipher/new.js"></script>
     <script src="/assets/js/bootstrap.min.js"></script>
     
   </body>

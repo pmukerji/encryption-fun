@@ -120,27 +120,6 @@ updateData = () ->
   
   redraw()
 
-
-change = () ->
-  
-  if this.checked
-    sort_function = (a,b) -> b.frequency-a.frequency
-  else
-    sort_function = (a,b) -> d3.ascending(a.letter, b.letter)
-    
-  x0 = x.domain(data.sort(sort_function).map((d) -> d.letter)).copy()
-
-  transition = svg.transition().duration(750)
-  delay = (d, i) -> i*50
-
-  transition.selectAll(".bar").delay(delay).attr("x", (d) -> x0(d.letter))
-
-  transition.select(".x.axis")
-      .call(xAxis)
-    .selectAll("g")
-      .delay(delay);
-
-
 redraw = () ->
     
   y0 = y.domain([0, 0.2])
@@ -180,6 +159,7 @@ decrypt = () ->
   
   
   $("#decrypted_message").html(decrypted_message)
+  calculate()
 
 
 
@@ -225,3 +205,63 @@ $( document ).ready( () ->
   updateData()
   updateShift()
 )
+
+calculate = () ->
+
+  arr = count_array.splice()
+  arr2 = count_array.splice()
+
+  for i in [0..25]
+    arr[i] = data[i].frequency
+    arr2[i] = datafix[i].frequency
+  
+  total=0.0
+  
+  for i in [0..25]
+    total += arr[i]
+
+  xmean=total/arr.length
+
+  total=0.0
+  for i in [0..25]
+    total += arr2[i]
+  ymean=total/arr2.length
+
+  sdx=standard_deviation(arr)
+  sdy=standard_deviation(arr2)
+  xy=0
+
+  for j in [0..25]
+  	xy+=(arr[j]-xmean)*(arr2[j]-ymean)
+  
+  corr=Math.round(1/(arr.length-1)*xy/(sdx*sdy)*10000)/10000
+  $("#num_inputs").html(arr.length)
+  $("#correlation").html(corr)
+  $("#message_mean").html(xmean)
+  $("#language_mean").html(ymean)
+  $("#message_std").html(Math.round(sdx*10000)/10000)
+  $("#language_std").html(Math.round(sdy*10000)/10000)
+
+standard_deviation = (arr) ->
+  
+	lcm=0
+	flag=false
+	total=0.0
+  
+	for i in [0..25]
+		total+=arr[i]
+  
+  mean=total/arr.length
+	
+  mean=Math.round(mean*10000)/10000	
+  
+  xm2=0.0
+
+  for i in [0..25]
+    xm2+=Math.pow((arr[i]-mean),2)
+    
+  sd=xm2/(arr.length-1)
+  
+  sd=Math.sqrt(sd)
+  
+  return sd
