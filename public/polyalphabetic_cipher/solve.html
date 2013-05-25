@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Encryption GUIs | Polyalphabetic Cipher | Create</title>
+    <title>Encryption GUIs | Polyalphabetic Cipher | Solve</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -19,7 +19,7 @@
         <ul class="nav nav-pills pull-right">
           <li><a href="/">Home</a></li>
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Caeser Cipher<b class="caret"></b></a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Caesar Cipher<b class="caret"></b></a>
             <ul class="dropdown-menu">
               <li><a href="/caesar_cipher/new">Create</a></li>
               <li><a href="/caesar_cipher/solve">Solve</a></li>
@@ -37,6 +37,8 @@
       </div>
 
       <hr>
+      
+      <h3>Solve a Polyalphabetic Cipher</h3>
       
       <div>
         <label>Encrypted Message:</label><br/>
@@ -56,18 +58,10 @@
         <label>Decrypted Message:</label><br/>
         <div id="decrypted_message"></div>
       </div>
-      
-      <hr>
-      
-      <a id="left_button" class="btn btn-info btn-small"><i class="icon-white icon-arrow-left"></i> Left</a> 
-      <a id="right_button" class="btn btn-info btn-small">Right <i class="icon-white icon-arrow-right"></i></a>
-      <span id="shift_label"><strong>Encryption Shift: </strong><span id="shift">0</span>
-      <div id="barchart"></div><br/>
 
     </div> <!-- /container -->
     
     <script src="/assets/js/jquery-1.9.1.min.js"></script>
-    <script src="http://d3js.org/d3.v3.min.js"></script>
     <script src="/assets/js/polyalphabetic_cipher/solve.js"></script>
     <script src="/assets/js/bootstrap.min.js"></script>
     
