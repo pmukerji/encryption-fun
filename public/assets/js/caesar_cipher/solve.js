@@ -1,5 +1,5 @@
 (function() {
-  var calculate, count_array, data, datafix, decrypt, english_letter_frequencies, height, i, letterToNum, margin, normalizeToLetter, numToLetter, redraw, shift, standard_deviation, svg, updateData, updateShift, width, x, xAxis, xfix, y, yAxis, yfix, _i, _j;
+  var calculate, count_array, data, datafix, decrypt, english_letter_frequencies, height, i, margin, redraw, shift, standard_deviation, svg, updateData, updateShift, width, x, xAxis, xfix, y, yAxis, yfix, _i, _j;
 
   english_letter_frequencies = [8.167, 1.492, 2.782, 4.253, 12.702, 2.228, 2.015, 6.094, 6.966, 0.153, 0.772, 4.025, 2.406, 6.749, 7.507, 1.929, 0.095, 5.987, 6.327, 9.056, 2.758, 0.978, 2.360, 0.150, 1.974, 0.074];
 
@@ -10,24 +10,6 @@
   datafix = [];
 
   count_array = [];
-
-  numToLetter = function(num) {
-    return String.fromCharCode(97 + (num % 26));
-  };
-
-  letterToNum = function(letter) {
-    return letter.charCodeAt(0) - 97;
-  };
-
-  normalizeToLetter = function(num) {
-    if (num > 25) {
-      return num - 26;
-    } else if (num < 0) {
-      return num + 26;
-    } else {
-      return num;
-    }
-  };
 
   for (i = _i = 0; _i <= 25; i = ++_i) {
     count_array[i] = 0;

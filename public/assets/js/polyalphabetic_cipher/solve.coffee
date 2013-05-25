@@ -2,18 +2,6 @@
 
 shift = "example"
 
-numToLetter = (num) -> String.fromCharCode(97 + (num % 26))
-
-letterToNum = (letter) -> letter.charCodeAt(0)-97
-
-normalizeToLetter = (num) ->
-  if num > 25
-    num-26
-  else if num < 0
-    num+26
-  else
-    num
-
 # Define function for updating the data when the message changes
 updateData = () -> 
   

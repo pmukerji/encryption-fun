@@ -6,18 +6,6 @@ data = []
 datafix = []
 count_array = []
 
-numToLetter = (num) -> String.fromCharCode(97 + (num % 26))
-
-letterToNum = (letter) -> letter.charCodeAt(0)-97
-
-normalizeToLetter = (num) ->
-  if num > 25
-    num-26
-  else if num < 0
-    num+26
-  else
-    num
-
 for i in [0..25]
   count_array[i] = 0
   data[i] = {"letter": numToLetter(i), "frequency": 0}

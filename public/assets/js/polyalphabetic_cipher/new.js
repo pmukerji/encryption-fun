@@ -1,25 +1,7 @@
 (function() {
-  var decrypt, letterToNum, normalizeToLetter, numToLetter, shift, updateData;
+  var decrypt, shift, updateData;
 
   shift = "example";
-
-  numToLetter = function(num) {
-    return String.fromCharCode(97 + (num % 26));
-  };
-
-  letterToNum = function(letter) {
-    return letter.charCodeAt(0) - 97;
-  };
-
-  normalizeToLetter = function(num) {
-    if (num > 25) {
-      return num - 26;
-    } else if (num < 0) {
-      return num + 26;
-    } else {
-      return num;
-    }
-  };
 
   updateData = function() {
     return decrypt();
