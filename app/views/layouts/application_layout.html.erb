@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Encryption GUIs | Polyalphabetic Cipher | Create</title>
+    <title>Encryption GUIs | <%= title %></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -38,34 +38,12 @@
 
       <hr>
       
-      <h3>Use a Polyalphabetic Cipher</h3>
+      <script src="/assets/js/jquery-1.9.1.min.js"></script>
+      <script src="/assets/js/bootstrap.min.js"></script>
       
-      <hr>
-      
-      <div>
-        <label>Original Message:</label><br/>
-        <input id="message" type="textarea" value="replace this text with the original message and you get an encrypted version"></input>
-      </div>
-
-      <hr>
-            
-      <div>
-        <label>Shift Key:</label><br/>
-        <input id="shift_key" type="textarea" value="example"></input>
-      </div>
-      
-      <hr>
-      
-      <div>
-        <label>Encrypted Message:</label><br/>
-        <div id="decrypted_message"></div>
-      </div>
+      <%= yield %>
       
     </div> <!-- /container -->
-    
-    <script src="/assets/js/jquery-1.9.1.min.js"></script>
-    <script src="/assets/js/polyalphabetic_cipher/new.js"></script>
-    <script src="/assets/js/bootstrap.min.js"></script>
     
   </body>
 </html>

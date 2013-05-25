@@ -1,2 +1,5 @@
 source 'https://rubygems.org'
 gem 'rack'
+gem 'tilt'
+gem 'json'
+gem 'coffee-script'
